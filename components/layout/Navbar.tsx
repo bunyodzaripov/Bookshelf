@@ -20,7 +20,7 @@ export default function Navbar() {
   const isLoggedIn = false;
 
   return (
-    <header className="w-full bg-background border-b border-border">
+    <header className="w-full z-50 fixed top-0 left-0 bg-background border-b border-border">
       <Container className="h-16 flex items-center justify-between gap-6">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
