@@ -20,12 +20,12 @@ export default function Navbar() {
   const isLoggedIn = false;
 
   return (
-    <header className="w-full z-50 fixed top-0 left-0 bg-background border-b border-border">
+    <header className="w-full z-50 sticky top-0 bg-background border-b border-border">
       <Container className="h-16 flex items-center justify-between gap-6">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <span className="text-xl font-semibold text-foreground font-serif">
-            Kitob<span className="text-accent">Bozor</span>
+            Book<span className="text-accent">shelf</span>
           </span>
         </Link>
 
@@ -35,7 +35,7 @@ export default function Navbar() {
           <input
             type="text"
             placeholder="Search book name, author..."
-            className="bg-transparent text-sm text-foreground placeholder:text-muted-foreground outline-none w-full"
+            className="bg-transparent text-sm text-foreground placeholder:text-muted-foreground focus:placeholder:text-transparent outline-none w-full"
           />
         </div>
 

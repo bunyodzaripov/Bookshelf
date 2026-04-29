@@ -3,7 +3,7 @@ import Container from "@/components/ui/container";
 
 export default function HeroSection() {
   return (
-    <section className="py-20 md:py-28 mt-16">
+    <section className="py-20 md:py-28">
       <Container>
         <div className="flex flex-col md:flex-row items-center gap-12">
           {/* Left */}

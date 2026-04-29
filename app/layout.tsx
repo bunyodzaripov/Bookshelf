@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Lora } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -7,13 +7,13 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const lora = Lora({
+  variable: "--font-lora",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "KitobBozor",
+  title: "Bookshelf",
   description:
     "Uzbekistan's book exchange platform. Share, swap, and discover books with fellow readers.",
 };
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${playfair.variable} h-full antialiased`}
+      className={`${inter.variable} ${lora.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         {children}

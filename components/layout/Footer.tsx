@@ -28,7 +28,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <Link href="/" className="inline-block mb-4">
               <span className="text-2xl font-semibold font-serif">
-                Kitob<span className="text-accent">Bozor</span>
+                Book<span className="text-accent">shelf</span>
               </span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
