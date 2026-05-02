@@ -1,4 +1,4 @@
-import { Book, User } from "@/@types";
+import { Book, User, Post, Club, Trend } from "@/@types";
 
 export const mockUsers: User[] = [
   {
@@ -282,4 +282,114 @@ export const TYPES: { value: Book["type"]; label: string }[] = [
   { value: "sell", label: "Sell" },
   { value: "both", label: "Swap & Sell" },
   { value: "free", label: "Free" },
+];
+
+export const mockPosts: Post[] = [
+  {
+    id: "1",
+    author: mockUsers[0],
+    category: "Recommendations",
+    content:
+      'Just finished "Sapiens" and it completely changed my perspective on human history! Highly recommend it to everyone. Has anyone read "Homo Deus" yet? Is it worth it?',
+    book: { title: "Sapiens", author: "Yuval Noah Harari" },
+    likesCount: 24,
+    commentsCount: 8,
+    comments: [
+      {
+        id: "c1",
+        author: mockUsers[1],
+        content: "Yes! Homo Deus is even more mind-blowing. Read it next!",
+        createdAt: "2 hours ago",
+      },
+      {
+        id: "c2",
+        author: mockUsers[2],
+        content: "Sapiens is on my list. Thanks for the push!",
+        createdAt: "1 hour ago",
+      },
+    ],
+    createdAt: "2 hours ago",
+  },
+  {
+    id: "2",
+    author: mockUsers[3],
+    category: "Questions",
+    content:
+      "Looking for good Uzbek-language books for kids aged 8-12. Preferably adventure or fantasy. Any recommendations from the community?",
+    likesCount: 11,
+    commentsCount: 15,
+    comments: [
+      {
+        id: "c3",
+        author: mockUsers[0],
+        content:
+          'Try "Kichkina Shahzoda" — timeless classic for that age group.',
+        createdAt: "3 hours ago",
+      },
+    ],
+    createdAt: "5 hours ago",
+  },
+  {
+    id: "3",
+    author: mockUsers[2],
+    category: "Discussions",
+    content:
+      '"O\'tkan Kunlar" vs "Mehrobdan Chayon" — which one is better? I personally lean towards O\'tkan Kunlar for its depth, but Mehrobdan Chayon hits harder emotionally. What do you think?',
+    likesCount: 38,
+    commentsCount: 22,
+    comments: [
+      {
+        id: "c4",
+        author: mockUsers[1],
+        content:
+          "O'tkan Kunlar for the historical richness. Mehrobdan Chayon for the drama!",
+        createdAt: "1 day ago",
+      },
+    ],
+    createdAt: "1 day ago",
+  },
+  {
+    id: "4",
+    author: mockUsers[1],
+    category: "News",
+    content:
+      'Classic Literature Club monthly book is "Daftar Hoshiyasida" by O\'tkir Hoshimov. Discussion session will be held online on February 15th at 7:00 PM. All members are welcome!',
+    book: { title: "Daftar Hoshiyasida", author: "O'tkir Hoshimov" },
+    likesCount: 56,
+    commentsCount: 14,
+    createdAt: "2 days ago",
+  },
+  {
+    id: "5",
+    author: mockUsers[0],
+    category: "Recommendations",
+    content:
+      "\"Atomic Habits\" by James Clear is an absolute game-changer. I've read it twice now and keep finding new insights. If you're trying to build better habits, this is the book.",
+    book: { title: "Atomic Habits", author: "James Clear" },
+    likesCount: 19,
+    commentsCount: 6,
+    createdAt: "3 days ago",
+  },
+];
+
+export const mockClubs: Club[] = [
+  { id: "1", name: "Classic Literature", icon: "📖", membersCount: 142 },
+  { id: "2", name: "Science & History", icon: "🔬", membersCount: 89 },
+  { id: "3", name: "Business & Finance", icon: "💼", membersCount: 214 },
+  { id: "4", name: "Psychology", icon: "🧠", membersCount: 67 },
+];
+
+export const mockTrends: Trend[] = [
+  { tag: "classiclit", count: 84 },
+  { tag: "recommendations", count: 61 },
+  { tag: "bookswap", count: 48 },
+  { tag: "businessbooks", count: 37 },
+  { tag: "monthlyread", count: 29 },
+];
+
+export const mockTopReaders: User[] = [
+  { ...mockUsers[0], booksCount: 23 },
+  { ...mockUsers[1], booksCount: 15 },
+  { ...mockUsers[3], booksCount: 12 },
+  { ...mockUsers[2], booksCount: 9 },
 ];
