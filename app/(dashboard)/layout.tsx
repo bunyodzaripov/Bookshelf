@@ -19,7 +19,7 @@ export default function DashboardLayout({
           collapsed={collapsed}
           onToggle={() => setCollapsed(!collapsed)}
         />
-        <main className="flex-1 overflow-y-auto">{children}</main>
+        <main className="flex-1 overflow-y-auto px-6 py-8">{children}</main>
       </div>
     </div>
   );
