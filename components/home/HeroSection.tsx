@@ -24,7 +24,7 @@ export default function HeroSection() {
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
               <Link
-                href="/auth/register"
+                href="/register"
                 className="bg-primary text-primary-foreground px-8 py-3 rounded-full text-sm font-medium hover:bg-accent transition-colors text-center"
               >
                 Get started ↗

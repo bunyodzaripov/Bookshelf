@@ -92,7 +92,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2025 KitobBozor. All rights reserved.
+            © 2025 Bookshelf. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground">
             Made with ❤️ for book lovers in Uzbekistan

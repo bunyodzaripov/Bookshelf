@@ -14,7 +14,7 @@ export default function CTASection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
-              href="/auth/register"
+              href="/register"
               className="bg-accent text-white px-8 py-3 rounded-full text-sm font-medium hover:bg-accent/90 transition-colors text-center"
             >
               Get started ↗

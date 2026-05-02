@@ -73,13 +73,13 @@ export default function Navbar() {
           ) : (
             <>
               <Link
-                href="/auth/login"
+                href="/login"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 Sign in
               </Link>
               <Link
-                href="/auth/register"
+                href="/register"
                 className="text-sm bg-primary text-primary-foreground px-4 py-2 rounded-full hover:bg-accent transition-colors"
               >
                 Get started
@@ -131,13 +131,13 @@ export default function Navbar() {
           ) : (
             <div className="flex flex-col gap-2 pt-2 border-t border-border">
               <Link
-                href="/auth/login"
+                href="/login"
                 className="text-sm text-center text-muted-foreground py-2"
               >
                 Sign in
               </Link>
               <Link
-                href="/auth/register"
+                href="/register"
                 className="text-sm text-center bg-primary text-primary-foreground px-4 py-2 rounded-full"
               >
                 Get started
