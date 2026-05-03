@@ -9,6 +9,7 @@ import {
   Users,
   User,
   Settings,
+  Plus,
 } from "lucide-react";
 
 const navItems = [
@@ -28,7 +29,7 @@ export default function DashboardSidebar({ collapsed }: DashboardSidebarProps) {
 
   return (
     <aside
-      className={`shrink-0 h-screen sticky top-0 flex flex-col items-center bg-card border-r border-border transition-all duration-300 py-4 ${
+      className={`shrink-0 h-screen sticky top-0 flex flex-col items-center bg-primary border-r border-primary/20 transition-all duration-300 py-4 ${
         collapsed ? "w-0 overflow-hidden border-none" : "w-16"
       }`}
     >
@@ -42,7 +43,7 @@ export default function DashboardSidebar({ collapsed }: DashboardSidebarProps) {
       </div>
 
       {/* Nav items — o'rtada */}
-      <nav className="flex-1 flex flex-col items-center justify-center gap-2">
+      <nav className="flex-1 flex flex-col items-center justify-center gap-1">
         {navItems.map(({ href, icon: Icon }) => {
           const isActive = pathname === href;
           return (
@@ -52,7 +53,7 @@ export default function DashboardSidebar({ collapsed }: DashboardSidebarProps) {
               className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors ${
                 isActive
                   ? "bg-accent text-white"
-                  : "text-muted-foreground hover:bg-background hover:text-foreground"
+                  : "text-white/60 hover:bg-white/10 hover:text-white"
               }`}
             >
               <Icon size={18} />
@@ -61,14 +62,25 @@ export default function DashboardSidebar({ collapsed }: DashboardSidebarProps) {
         })}
       </nav>
 
-      {/* Settings — pastda */}
-      <div className="mt-auto flex flex-col items-center gap-2">
+      {/* Add book */}
+      <div className="mb-3">
+        <Link
+          href="/my-books/add"
+          title="Add book"
+          className="w-10 h-10 rounded-xl flex items-center justify-center border border-white/20 text-white/60 hover:bg-white/10 hover:text-white transition-colors"
+        >
+          <Plus size={18} />
+        </Link>
+      </div>
+
+      {/* Settings */}
+      <div>
         <Link
           href="/settings"
           className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors ${
             pathname === "/settings"
               ? "bg-accent text-white"
-              : "text-muted-foreground hover:bg-background hover:text-foreground"
+              : "text-white/60 hover:bg-white/10 hover:text-white"
           }`}
         >
           <Settings size={18} />

@@ -7,43 +7,43 @@
 @theme inline {
   /* ===== FONTS ===== */
   --font-sans: var(--font-inter);
-  --font-serif: var(--font-lora);
-  --font-heading: var(--font-lora);
+  --font-serif: var(--font-lato);
+  --font-heading: var(--font-lato);
 
-  /* ===== COLORS ===== */
-  --color-background: #f5f0e8;
+  /* ===== COLORS — Nexbook style ===== */
+  --color-background: #faf9f8;
   --color-foreground: #1a1a1a;
 
-  --color-card: #edeae0;
+  --color-card: #ffffff;
   --color-card-foreground: #1a1a1a;
 
-  --color-primary: #1a1a1a;
-  --color-primary-foreground: #f5f0e8;
+  --color-primary: #476069;
+  --color-primary-foreground: #ffffff;
 
-  --color-secondary: #edeae0;
-  --color-secondary-foreground: #1a1a1a;
+  --color-secondary: #eae8e2;
+  --color-secondary-foreground: #476069;
 
-  --color-accent: #e8593c;
+  --color-accent: #d89c37;
   --color-accent-foreground: #ffffff;
 
-  --color-muted: #edeae0;
-  --color-muted-foreground: #6b6b6b;
+  --color-muted: #eae8e2;
+  --color-muted-foreground: #6b7280;
 
-  --color-border: #e0dbd0;
-  --color-input: #edeae0;
-  --color-ring: #e8593c;
+  --color-border: #e2dfd8;
+  --color-input: #ffffff;
+  --color-ring: #d89c37;
 
   --color-destructive: oklch(0.577 0.245 27.325);
 
   /* ===== SIDEBAR ===== */
-  --color-sidebar: #edeae0;
-  --color-sidebar-foreground: #1a1a1a;
-  --color-sidebar-primary: #e8593c;
+  --color-sidebar: #476069;
+  --color-sidebar-foreground: #ffffff;
+  --color-sidebar-primary: #c9922a;
   --color-sidebar-primary-foreground: #ffffff;
-  --color-sidebar-accent: #e0dbd0;
-  --color-sidebar-accent-foreground: #1a1a1a;
-  --color-sidebar-border: #e0dbd0;
-  --color-sidebar-ring: #e8593c;
+  --color-sidebar-accent: #3d5259;
+  --color-sidebar-accent-foreground: #ffffff;
+  --color-sidebar-border: #3d5259;
+  --color-sidebar-ring: #c9922a;
 
   /* ===== RADIUS ===== */
   --radius: 0.625rem;
@@ -54,6 +54,18 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
 }
 
 :root {
@@ -123,16 +135,4 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
-}
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-  html {
-    @apply font-sans;
-  }
 }

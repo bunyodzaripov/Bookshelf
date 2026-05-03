@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Lora } from "next/font/google";
+import { Inter, Lato } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -7,13 +7,14 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const lora = Lora({
-  variable: "--font-lora",
+const lato = Lato({
+  variable: "--font-lato",
   subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Bookshelf",
+  title: "KitobBozor",
   description:
     "Uzbekistan's book exchange platform. Share, swap, and discover books with fellow readers.",
 };
@@ -25,8 +26,8 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
-      className={`${inter.variable} ${lora.variable} h-full antialiased`}
+      lang="uz"
+      className={`${inter.variable} ${lato.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         {children}

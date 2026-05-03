@@ -25,18 +25,18 @@ export default function DashboardHeader({
   const title = pageTitles[pathname] ?? "Dashboard";
 
   return (
-    <header className="h-16 border-b border-border bg-card/50 flex items-center justify-between px-6 shrink-0">
+    <header className="h-16 border-b border-primary/20 bg-primary flex items-center justify-between px-6 shrink-0">
       <div className="flex items-center gap-4">
         {/* Toggle button */}
         <button
           onClick={onToggle}
-          className="p-2 cursor-pointer rounded-xl hover:bg-background text-muted-foreground hover:text-foreground transition-colors"
+          className="p-2 cursor-pointer rounded-xl hover:bg-background text-background hover:text-foreground transition-colors"
           title={collapsed ? "Expand sidebar" : "Collapse sidebar"}
         >
           <PanelLeft size={18} />
         </button>
 
-        <h1 className="font-serif text-xl text-foreground">{title}</h1>
+        <h1 className="font-serif text-xl text-background">{title}</h1>
       </div>
 
       <div className="flex items-center gap-3">

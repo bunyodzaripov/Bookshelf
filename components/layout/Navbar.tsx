@@ -20,22 +20,22 @@ export default function Navbar() {
   const isLoggedIn = false;
 
   return (
-    <header className="w-full z-50 sticky top-0 bg-background border-b border-border">
+    <header className="w-full z-50 sticky top-0 bg-primary border-b border-foreground/30">
       <Container className="h-16 flex items-center justify-between gap-6">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
-          <span className="text-xl font-semibold text-foreground font-serif">
+          <span className="text-xl font-semibold text-background font-serif">
             Book<span className="text-accent">shelf</span>
           </span>
         </Link>
 
         {/* Search bar - desktop */}
-        <div className="hidden md:flex items-center gap-2 flex-1 max-w-md bg-card border border-border rounded-full px-4 py-2">
-          <Search size={16} className="text-muted-foreground shrink-0" />
+        <div className="hidden md:flex items-center gap-2 flex-1 max-w-md border border-background/30 bg-background/20 rounded-full px-4 py-2">
+          <Search size={16} className="text-background shrink-0" />
           <input
             type="text"
             placeholder="Search book name, author..."
-            className="bg-transparent text-sm text-foreground placeholder:text-muted-foreground focus:placeholder:text-transparent outline-none w-full"
+            className="bg-transparent text-sm text-background placeholder:text-background focus:placeholder:text-transparent outline-none w-full"
           />
         </div>
 
@@ -48,7 +48,7 @@ export default function Navbar() {
               className={`text-sm transition-colors ${
                 pathname === link.href
                   ? "text-accent font-medium"
-                  : "text-muted-foreground hover:text-foreground"
+                  : "text-background hover:text-accent"
               }`}
             >
               {link.label}

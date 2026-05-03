@@ -21,17 +21,17 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-background border-t border-border">
+    <footer className="bg-primary border-t border-primary-foreground/10">
       <Container className="py-14">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
           {/* Brand */}
           <div className="md:col-span-2">
             <Link href="/" className="inline-block mb-4">
-              <span className="text-2xl font-semibold font-serif">
+              <span className="text-2xl font-semibold font-serif text-background">
                 Book<span className="text-accent">shelf</span>
               </span>
             </Link>
-            <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
+            <p className="text-sm text-background/70 leading-relaxed max-w-xs">
               Uzbekistan`s book exchange platform. Share, swap, and discover
               books with fellow readers.
             </p>
@@ -70,7 +70,7 @@ export default function Footer() {
           {/* Links */}
           {Object.entries(footerLinks).map(([group, links]) => (
             <div key={group}>
-              <h4 className="text-sm font-medium text-foreground mb-4">
+              <h4 className="text-sm font-medium text-background mb-4">
                 {group}
               </h4>
               <ul className="flex flex-col gap-3">
@@ -78,7 +78,7 @@ export default function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-muted-foreground hover:text-accent transition-colors"
+                      className="text-sm text-background/70 hover:text-accent transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -90,11 +90,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-6 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground">
+        <div className="mt-12 pt-6 border-t border-border/10 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-background">
             © 2025 Bookshelf. All rights reserved.
           </p>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-background">
             Made with ❤️ for book lovers in Uzbekistan
           </p>
         </div>

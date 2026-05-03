@@ -3,21 +3,21 @@ import Container from "@/components/ui/container";
 
 export default function HeroSection() {
   return (
-    <section className="py-20 md:py-28">
+    <section className="py-20 md:py-28 bg-primary">
       <Container>
         <div className="flex flex-col md:flex-row items-center gap-12">
           {/* Left */}
           <div className="flex-1 text-center md:text-left">
-            <span className="inline-block text-sm text-accent border border-accent/30 bg-accent/10 px-4 py-1.5 rounded-full mb-6">
+            <span className="inline-block text-sm text-background border border-background/30 bg-background/20 px-4 py-1.5 rounded-full mb-6">
               📚 Uzbekistan`s book exchange platform
             </span>
 
-            <h1 className="font-serif text-4xl md:text-6xl text-foreground leading-tight mb-6">
+            <h1 className="font-serif text-4xl md:text-6xl text-background leading-tight mb-6">
               Read, <span className="text-accent">swap</span>,<br />
               build community
             </h1>
 
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-md mx-auto md:mx-0">
+            <p className="text-background/70 text-lg leading-relaxed mb-8 max-w-md mx-auto md:mx-0">
               Exchange books with other readers, sell or buy at affordable
               prices. Join a growing community of book lovers.
             </p>
